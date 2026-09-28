@@ -17,17 +17,6 @@ Once the item is evicted, its slot can be reused.
 The crate works in `no_std` programs and has no dependencies. The ring itself
 never allocates, although the values stored in it may.
 
-## Usage
-
-Add `slotring = "0.1"` to your Cargo dependencies. The minimum supported Rust
-version is **1.85** (Rust 2024 edition).
-
-Capacity is fixed by the nonzero const parameter `N`. Logical offsets follow
-FIFO order, while physical slots remain stable for each live item and are
-reused after eviction. A saved slot number is therefore not a permanent item
-identity. A full ring replaces the oldest item on `push` and returns it to the
-caller.
-
 ## License
 
 Licensed under the MIT license. The license text is included in `LICENSE`.
