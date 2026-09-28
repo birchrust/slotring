@@ -1,0 +1,17 @@
+[package]
+name = "slotring"
+version = "0.1.0"
+edition = "2024"
+authors = ["birch"]
+description = "Fixed-capacity FIFO ring buffer with stable physical slots"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/birchrust/slotring"
+rust-version = "1.85.0"
+keywords = ["ring-buffer", "fifo", "no-std"]
+categories = ["data-structures", "no-std"]
+exclude = [".github/"]
+
+[[bench]]
+name = "ring"
+harness = false
